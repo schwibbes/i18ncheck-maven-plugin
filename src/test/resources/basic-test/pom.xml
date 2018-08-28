@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.github.schwibbes</groupId>
+  <artifactId>i18n-checker</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
+  <name>Test MyMojo</name>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>com.github.schwibbes</groupId>
+        <artifactId>i18n-checker</artifactId>
+        <version>1.0-SNAPSHOT</version>
+        <executions>
+          <execution>
+            <phase>compile</phase>
+            <goals>
+              <goal>i18nCheck</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <baseFilePath>${project.basedir}/src/main/resources/i18n/messages.properties</baseFilePath>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
